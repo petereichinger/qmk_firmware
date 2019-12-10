@@ -34,7 +34,8 @@ enum preonic_keycodes {
 #define MY_ESC HYPR_T(KC_ESC)
 #define MICMUTE HYPR(KC_F13)
 #define MO_FN MO(_FN)
-
+#define NTAB G(S(KC_RBRACKET))
+#define PTAB G(S(KC_LBRACKET))
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
@@ -103,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_FN] = LAYOUT_preonic_grid( \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL,  \
   _______, KC_PSCR, MICMUTE, _______, _______, _______, KC_VOLD, KC_MUTE, KC_VOLU, _______, _______, KC_DEL,  \
-  _______, _______, _______, _______, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, PTAB,    NTAB,    _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END   \
 ),
